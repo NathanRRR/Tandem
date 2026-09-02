@@ -214,6 +214,15 @@ export function BellIcon(props: IconProps) {
   );
 }
 
+export function TrashIcon(props: IconProps) {
+  return (
+    <Icon {...props}>
+      <path d="M4.5 7h15M9.5 7V5a1.5 1.5 0 0 1 1.5-1.5h2A1.5 1.5 0 0 1 14.5 5v2M18 7l-.8 12.2a2 2 0 0 1-2 1.8H8.8a2 2 0 0 1-2-1.8L6 7" />
+      <path d="M10 11v6M14 11v6" />
+    </Icon>
+  );
+}
+
 export function categoryIcon(categoryId: string): (props: IconProps) => JSX.Element {
   switch (categoryId) {
     case "loyer":

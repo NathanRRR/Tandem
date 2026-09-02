@@ -84,8 +84,9 @@ export default async function MonthDetailPage({
             const payerName = expense.payerId === currentUser.id ? currentUser.name : partner.name;
             const payerVariant = expense.payerId === currentUser.id ? meVariant : partnerVariant;
             return (
-              <div
+              <Link
                 key={expense.id}
+                href={`/expenses/${expense.id}/edit`}
                 className="flex items-center gap-3 rounded-2xl border border-border bg-surface p-3.5"
               >
                 <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-surface-2 text-ink-soft">
@@ -109,7 +110,7 @@ export default async function MonthDetailPage({
                     </span>
                   )}
                 </div>
-              </div>
+              </Link>
             );
           })}
         </div>
