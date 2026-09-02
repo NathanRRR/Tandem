@@ -4,6 +4,13 @@
 
 PWA de gestion de budget en couple, façon Tricount mais pensée pour un foyer à deux : suivi des dépenses communes, avec un objectif central de répartition équitable — que chaque mois, il reste le **même reste-à-vivre net** de chaque côté (pondéré par les revenus, pas un simple 50/50).
 
+## Aperçu
+
+<p align="center">
+  <img src="docs/screenshots/login.png" alt="Écran de connexion" width="45%">
+  <img src="docs/screenshots/dashboard.png" alt="Dashboard avec reste-à-vivre et solde de compensation" width="45%">
+</p>
+
 ## Pourquoi
 
 Les outils de partage de dépenses classiques (Tricount, Splitwise...) visent un partage égal ou au prorata des dépenses. Tandem vise autre chose : que les deux personnes du foyer gardent, après leurs dépenses communes, le même reste-à-vivre net — ou à défaut, un partage strictement proportionnel aux revenus. Deux modes de calcul, configurables :
