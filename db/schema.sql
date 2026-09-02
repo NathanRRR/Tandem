@@ -41,7 +41,7 @@ INSERT INTO categories (id, label, sort_order) VALUES
   ('sante', 'Santé', 7),
   ('autre', 'Autre', 8);
 
--- Modèle d'une dépense récurrente (ex: "Loyer, 950€, payé par Nathan").
+-- Modèle d'une dépense récurrente (ex: "Loyer, 950€, payé par Alice").
 -- Sert de gabarit pour générer une nouvelle occurrence dans expenses à chaque nouveau mois.
 CREATE TABLE recurring_templates (
   id VARCHAR(36) PRIMARY KEY,

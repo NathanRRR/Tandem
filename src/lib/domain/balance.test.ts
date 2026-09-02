@@ -6,7 +6,7 @@ const B = "user-b";
 
 describe("computeMonthlyBalance", () => {
   it("reproduit l'exemple de la maquette (revenus différents)", () => {
-    // Nathan 2450€, Léa 1950€, 1220€ de dépenses communes.
+    // Alice 2450€, Bob 1950€, 1220€ de dépenses communes.
     const result = computeMonthlyBalance({
       userAId: A,
       userBId: B,
@@ -29,7 +29,7 @@ describe("computeMonthlyBalance", () => {
     expect(result.restBCents).toBe(159_000); // reste à vivre identique des deux côtés
     expect(result.paidACents).toBe(101_390);
     expect(result.paidBCents).toBe(20_610);
-    expect(result.deltaCents).toBe(15_390); // Léa doit 153,90 € à Nathan
+    expect(result.deltaCents).toBe(15_390); // Bob doit 153,90 € à Alice
   });
 
   it("revient à un partage 50/50 quand les revenus sont égaux", () => {
@@ -87,7 +87,7 @@ describe("computeMonthlyBalance", () => {
   });
 
   it("mode proportional_income : répartit au prorata des revenus (pas d'égalisation du reste)", () => {
-    // Nathan 2450€, Léa 1950€ (ratio 245/195), 1220€ de dépenses communes.
+    // Alice 2450€, Bob 1950€ (ratio 245/195), 1220€ de dépenses communes.
     const result = computeMonthlyBalance({
       userAId: A,
       userBId: B,

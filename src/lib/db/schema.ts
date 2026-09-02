@@ -59,7 +59,7 @@ export const categories = mysqlTable("categories", {
   sortOrder: int("sort_order").notNull().default(0),
 });
 
-// Modèle d'une dépense récurrente (ex: "Loyer, 950€, payé par Nathan").
+// Modèle d'une dépense récurrente (ex: "Loyer, 950€, payé par Alice").
 // Sert de gabarit pour générer une nouvelle occurrence dans `expenses` à chaque nouveau mois.
 export const recurringTemplates = mysqlTable(
   "recurring_templates",

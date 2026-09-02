@@ -31,7 +31,7 @@ export default async function LoginPage({
               name="username"
               required
               autoComplete="username"
-              placeholder="nathan"
+              placeholder="alice"
               className="w-full bg-transparent text-[15px] text-ink outline-none placeholder:text-ink-faint"
             />
           </div>
