@@ -1,6 +1,5 @@
-// Anti-bruteforce en mémoire process (même pattern que les apps sœurs movies/journal/candidatures
-// sur ce VPS) : 5 échecs en 5 min -> verrou 12h. Suffisant pour un déploiement mono-instance ;
-// se réinitialise au redémarrage du conteneur.
+// Anti-bruteforce en mémoire process : 5 échecs en 5 min -> verrou 12h.
+// Suffisant pour un déploiement mono-instance ; se réinitialise au redémarrage du conteneur.
 const MAX_ATTEMPTS = 5;
 const FAILED_ATTEMPT_WINDOW_MS = 5 * 60 * 1000;
 const LOCKOUT_DURATION_MS = 12 * 60 * 60 * 1000;
