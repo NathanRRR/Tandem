@@ -1,0 +1,27 @@
+{
+  "version": "7",
+  "dialect": "mysql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1788252148608,
+      "tag": "0000_volatile_charles_xavier",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1788266370808,
+      "tag": "0001_clammy_the_anarchist",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1788285260496,
+      "tag": "0002_split_mode_history",
+      "breakpoints": true
+    }
+  ]
+}

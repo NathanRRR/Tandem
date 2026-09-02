@@ -1,0 +1,41 @@
+services:
+  db:
+    image: mariadb:11
+    restart: unless-stopped
+    environment:
+      MARIADB_ROOT_PASSWORD: ${MARIADB_ROOT_PASSWORD:-budget}
+      MARIADB_DATABASE: ${MARIADB_DATABASE:-budget}
+      MARIADB_USER: ${MARIADB_USER:-budget}
+      MARIADB_PASSWORD: ${MARIADB_PASSWORD:-budget}
+    ports:
+      - "127.0.0.1:${DB_HOST_PORT:-3308}:3306"
+    volumes:
+      - budget_db_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  app:
+    build: .
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: mysql://${MARIADB_USER:-budget}:${MARIADB_PASSWORD:-budget}@db:3306/${MARIADB_DATABASE:-budget}
+      SESSION_SECRET: ${SESSION_SECRET}
+      USER_A_USERNAME: ${USER_A_USERNAME}
+      USER_A_PASSWORD: ${USER_A_PASSWORD}
+      USER_A_NAME: ${USER_A_NAME}
+      USER_A_INCOME_CENTS: ${USER_A_INCOME_CENTS}
+      USER_B_USERNAME: ${USER_B_USERNAME}
+      USER_B_PASSWORD: ${USER_B_PASSWORD}
+      USER_B_NAME: ${USER_B_NAME}
+      USER_B_INCOME_CENTS: ${USER_B_INCOME_CENTS}
+    ports:
+      - "127.0.0.1:${APP_HOST_PORT:-4700}:3000"
+
+volumes:
+  budget_db_data:

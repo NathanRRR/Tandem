@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+:root {
+  --bg: oklch(97.3% 0.012 75);
+  --surface: oklch(99% 0.006 75);
+  --surface-2: oklch(95.5% 0.014 75);
+  --ink: oklch(23% 0.02 55);
+  --ink-soft: oklch(46% 0.02 60);
+  --ink-faint: oklch(62% 0.015 60);
+  --border: oklch(89% 0.016 70);
+  --accent-a: oklch(64% 0.135 35);
+  --accent-a-soft: oklch(93% 0.035 35);
+  --accent-b: oklch(62% 0.1 165);
+  --accent-b-soft: oklch(93% 0.03 165);
+  --gold: oklch(76% 0.13 80);
+  --gold-soft: oklch(94% 0.045 80);
+  --gold-ink: oklch(40% 0.09 80);
+  --sage-ok-soft: oklch(93% 0.03 165);
+  --sage-ok-ink: oklch(38% 0.09 165);
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-ink-faint: var(--ink-faint);
+  --color-border: var(--border);
+  --color-accent-a: var(--accent-a);
+  --color-accent-a-soft: var(--accent-a-soft);
+  --color-accent-b: var(--accent-b);
+  --color-accent-b-soft: var(--accent-b-soft);
+  --color-gold: var(--gold);
+  --color-gold-soft: var(--gold-soft);
+  --color-gold-ink: var(--gold-ink);
+  --color-sage-ok-soft: var(--sage-ok-soft);
+  --color-sage-ok-ink: var(--sage-ok-ink);
+  --font-sans: var(--font-manrope);
+  --font-serif: var(--font-lora);
+}
+
+a {
+  color: var(--accent-a);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--gold);
+}
