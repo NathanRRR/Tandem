@@ -1,5 +1,7 @@
 # Tandem
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 PWA de gestion de budget en couple, façon Tricount mais pensée pour un foyer à deux : suivi des dépenses communes, avec un objectif central de répartition équitable — que chaque mois, il reste le **même reste-à-vivre net** de chaque côté (pondéré par les revenus, pas un simple 50/50).
 
 ## Pourquoi
@@ -66,4 +68,4 @@ Lance MariaDB et l'application (`Dockerfile` fourni). Il reste à appliquer les 
 
 ## Licence
 
-[MIT](LICENSE)
+MIT — voir [LICENSE](LICENSE).
